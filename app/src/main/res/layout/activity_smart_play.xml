@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentRelativeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmartPlayActivity">
+
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/smart_toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/colorPrimary"
+       android:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
+       app:popupTheme="@style/MenuStyle"></android.support.v7.widget.Toolbar>
+   
+   <RelativeLayout
+       android:id="@+id/upper"
+       android:layout_width="match_parent"
+       android:layout_height="330dp">
+
+      <ImageView
+          android:id="@+id/logo"
+          android:layout_width="match_parent"
+          android:layout_height="270dp" />
+
+      <TextView
+          android:id="@+id/songName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/logo"
+          android:layout_alignParentTop="true"
+          android:layout_marginTop="290dp"
+          android:ellipsize="marquee"
+          android:marqueeRepeatLimit="marquee_forever"
+          android:singleLine="true"
+          android:textAlignment="center"
+          android:textAllCaps="false"
+          android:textSize="25dp"
+          android:textStyle="italic|bold" />
+   </RelativeLayout>
+
+   <RelativeLayout
+       android:id="@+id/lower"
+       android:layout_width="match_parent"
+       android:layout_height="330dp"
+       android:layout_below="@+id/upper"
+       android:gravity="center"
+       android:visibility="gone">
+
+      <ImageView
+          android:id="@+id/btn_previous"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/previous"
+          android:layout_marginRight="30dp"
+
+          />
+      <ImageView
+          android:id="@+id/btn_play_pause"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toEndOf="@+id/btn_previous"
+          android:src="@drawable/pause"
+          android:layout_marginRight="30dp"
+
+          />
+
+      <ImageView
+          android:id="@+id/btn_next"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toEndOf="@+id/btn_play_pause"
+          android:src="@drawable/next"
+          android:layout_marginRight="30dp"
+          />
+
+   </RelativeLayout>
+
+   <Button
+       android:id="@+id/voice_enabled"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="8dp"
+       android:layout_alignParentBottom="true"
+       android:background="@color/colorPrimary"
+       android:textColor="@android:color/white"
+       android:text="Voice Enabled Mode-On"
+       android:textSize="16dp"
+       android:textAllCaps="true"
+       android:textStyle="italic|bold"/>
+
+</RelativeLayout>
